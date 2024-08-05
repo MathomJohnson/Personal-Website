@@ -9,10 +9,15 @@ nav {
 
 .navbar-nav {
     margin-top: 20px;
-    margin-right: 30px;
+    margin-right: 10%;
+}
+
+.nav-link {
+    font-size: larger !important;
 }
 
 .navbar-brand {
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 10%;
+    font-size: 30px !important;
 }

@@ -10,14 +10,17 @@ import Contact from './components/pages/Contact'
 function App() {
   return (
     <>
-    <Navbar />
-    <Routes>
-      <Route path="/about" element={<About />}></Route>
-      <Route path="/skills" element={<Skills />}></Route>
-      <Route path="/projects" element={<Projects />}></Route>
-      <Route path="/contact" element={<Contact />}></Route>
-    </Routes>
-
+      <Navbar />
+      {/* <Routes>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/skills" element={<Skills />}></Route>
+        <Route path="/projects" element={<Projects />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes> */}
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
     </>
   )
 }

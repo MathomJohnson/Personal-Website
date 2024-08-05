@@ -6,7 +6,7 @@
 /* Flexbox container for horizontal layout */
 .about-container {
     display: flex;
-    gap: 100px;
+    gap: 40px;
     justify-content: center; /* Distributes space between the items */
     align-items: center;           /* Centers items vertically */
     padding: 20px;                 /* Optional padding */
@@ -19,20 +19,36 @@
     text-align: center;           /* Center text inside */
   }
   
-  /* About div styling */
-  .about {
-    width: 30%;                    /* Takes up the other half of the width of the parent container */
-    /*margin:auto;*/
-    padding: 20px;
-    border: .01em solid var(--border-color);    /* Example border color (Dim Gray) */
-    border-radius: 30px;
-    background-color: var(--background-color);   /* Optional background color */
-    text-align: center;           /* Center text inside */
-  }
+/* About div styling */
+.about {
+  width: 30%;                    /* Takes up the other half of the width of the parent container */
+  /*margin:auto;*/
+  text-align:center;
+} .about p {
+  margin-bottom: 0px;
+  font-size: large;
+} .about h1 {
+  font-size: 50px;
+}
 
 .mathom-headshot {
     width: 350px; /* Adjust the width as needed */
     height: 350px; /* Adjust the height to match the width for a perfect circle */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.my-border {
+  padding: 20px;
+  border: .01em solid var(--border-color);    /* Example border color (Dim Gray) */
+  border-radius: 30px;
+  background-color: var(--background-color);   /* Optional background color */
+  text-align: center;           /* Center text inside */
+}
+
+/* Logos */
+.logo {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
 }
