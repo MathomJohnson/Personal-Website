@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-body-white">
             <div className="container-fluid">
-                <Link className="navbar-brand ubuntu-medium" to="/">Mathom Johnson</Link>
+                <Link className="navbar-brand ubuntu-light-italic" to="/">Mathom Johnson</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>

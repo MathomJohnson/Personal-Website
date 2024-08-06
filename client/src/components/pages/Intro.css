@@ -5,7 +5,7 @@
 
 /* Flexbox container for horizontal layout */
 #intro-container {
-  height: calc(100vh - 200px); /* Full viewport height */
+  height: calc(100vh - 240px); /* Full viewport height */
   display: flex;
   gap: 40px;
   justify-content: center; /* Distributes space between the items */

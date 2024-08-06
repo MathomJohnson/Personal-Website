@@ -1,6 +1,34 @@
 import './About.css'
+import { useEffect, useState } from 'react';
+
+// Define the User type
+interface Course {
+    name: string;
+    start_at: string;
+    // Add other properties if needed
+}
 
 function About() {
+
+    const [courses, setCourses] = useState<Course[]>([]);
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+        fetch("http://localhost:8080/fake-users")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+                return response.json(); // Parse JSON from the response
+            })
+            .then(data => {
+                setCourses(data); // Store the data in state
+            })
+            .catch(error => {
+                setError('There has been a problem with your fetch operation: ' + error.message);
+            });
+    }, []);
+
     return (
         <div id="about">
             <h2 className="ubuntu-medium">Get To Know Me</h2>
@@ -9,7 +37,7 @@ function About() {
                     <div className="education-container my-border">
                         <div className="education">
                             <img className="mortarboard-logo" src="/images/mortarboard.png"></img>
-                            <h3 className="ubuntu-medium">Education</h3>
+                            <h3 className="ubuntu-light-italic">Education</h3>
                         </div>
                         <div className="education-desc">
                             <p className="ubuntu-light-italic">
@@ -20,7 +48,7 @@ function About() {
                     <div className="interests-container my-border">
                         <div className="interests">
                             <img className="magnifying-logo" src="/images/magnifying-glass.png"></img>
-                            <h3 className="ubuntu-medium">Interests</h3>
+                            <h3 className="ubuntu-regular">Interests</h3>
                         </div>
                         <div className="interests-desc">
                             <p className="ubuntu-light-italic">
@@ -40,6 +68,13 @@ function About() {
                 Over the summer I got to meet with countless students from all over the world. Outside of school I am studying Machine Learning through 
                 Coursera and YouTube. I love to apply math to real-world problems that Machine Learning aims to solve.
             </p>
+            <ul>
+                {courses.map(c => (
+                    <li>
+                        {c.name},  ({c.start_at})
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }
