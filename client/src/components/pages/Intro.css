@@ -1,0 +1,69 @@
+:root {
+    --border-color: #808080; /* Define custom property */
+    --background-color: white;
+}
+
+/* Flexbox container for horizontal layout */
+#intro-container {
+  height: calc(100vh - 200px); /* Full viewport height */
+  display: flex;
+  gap: 40px;
+  justify-content: center; /* Distributes space between the items */
+  align-items: center;           /* Centers items vertically */
+  }
+  
+  /* Left content styling */
+  .left-content {
+    width: 30%;                    /* Takes up half the width of the parent container */
+    padding: 20px;
+    text-align: center;           /* Center text inside */
+  }
+  
+/* About div styling */
+.intro {
+  width: 30%;                    /* Takes up the other half of the width of the parent container */
+  /*margin:auto;*/
+  text-align:center;
+} .intro p {
+  margin-bottom: 0px;
+  font-size: large;
+} .intro h1 {
+  font-size: 50px;
+}
+
+.mathom-headshot {
+    width: 350px; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height to match the width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Logos */
+.logo {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+
+/* Resume button */
+.resume-button {
+  background-color: white;
+  border: 1px solid #3b3b3b;
+  color: #3b3b3b;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Adjusted transition duration */
+}
+
+/* Change button style on hover */
+.resume-button:hover {
+  background-color: #3b3b3b; /* Darker green */
+  color: #fff; /* White */
+}

@@ -5,6 +5,7 @@
 nav {
     background-color: white;
     margin-bottom:60px;
+    z-index: 1000; /* Make sure it's above other content */
 }
 
 .navbar-nav {

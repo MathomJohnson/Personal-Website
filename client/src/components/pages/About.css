@@ -1,43 +1,3 @@
-:root {
-    --border-color: #808080; /* Define custom property */
-    --background-color: white;
-}
-
-/* Flexbox container for horizontal layout */
-.about-container {
-    display: flex;
-    gap: 40px;
-    justify-content: center; /* Distributes space between the items */
-    align-items: center;           /* Centers items vertically */
-    padding: 20px;                 /* Optional padding */
-  }
-  
-  /* Left content styling */
-  .left-content {
-    width: 30%;                    /* Takes up half the width of the parent container */
-    padding: 20px;
-    text-align: center;           /* Center text inside */
-  }
-  
-/* About div styling */
-.about {
-  width: 30%;                    /* Takes up the other half of the width of the parent container */
-  /*margin:auto;*/
-  text-align:center;
-} .about p {
-  margin-bottom: 0px;
-  font-size: large;
-} .about h1 {
-  font-size: 50px;
-}
-
-.mathom-headshot {
-    width: 350px; /* Adjust the width as needed */
-    height: 350px; /* Adjust the height to match the width for a perfect circle */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-}
-
 .my-border {
   padding: 20px;
   border: .01em solid var(--border-color);    /* Example border color (Dim Gray) */
@@ -46,9 +6,84 @@
   text-align: center;           /* Center text inside */
 }
 
-/* Logos */
-.logo {
-  height: 40px;
-  width: 40px;
-  margin: 10px;
+#about {
+  padding-top: 100px;
+} #about h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-top:20px;
+}
+
+.education-container {
+  width: 100%;
+}
+
+.education {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.interests-container {
+  width: 100%;
+}
+
+.interests {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.edu-and-interests {
+  display: flex;
+  flex-direction: column; /* Ensure that the containers stack vertically */
+  gap: 25px;
+  width: 35%;
+}
+
+.education-desc p {
+  font-size: larger;
+  margin-bottom: 0px;
+}
+
+.interests-desc p {
+  font-size: larger;
+  margin-bottom: 0px;
+}
+
+.about-me {
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  font-size: large;
+}
+
+.grand-canyon {
+  width: 30%;
+}
+
+.gc-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
+
+.mortarboard-logo {
+  height: 30px;
+  width:30px;
+}
+
+.magnifying-logo {
+  height:25px;
+  width: auto;
 }
