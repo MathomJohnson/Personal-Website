@@ -9,17 +9,49 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get("/api", (req, res) => {
-    res.json({"animals": ["grue", "me", "scout"]})
-});
+// Filter classes based on current semester
+function parseCourses(courses) {
+    const now = new Date();
+    const current_month = now.getMonth()
+    const current_year = now.getFullYear();
+
+    const course_list = []
+
+    for (let i = 0; i < courses.length; i ++) {
+        const course = courses[i];
+
+        // Cleanup course name
+        const course_name = course.name;
+        if (typeof course_name !== 'string') {
+            continue;
+        }
+        course.name = course_name.replace(/\s*\(\d+\)[^\)]*$/, '').trim();
+        
+        const start_date = new Date(course.start_at);
+        const month = start_date.getMonth();
+        const year = start_date.getFullYear();
+
+        if (year < current_year) {
+            continue;
+        }
+        else if (current_month > 6 && month > 6) {
+            course_list.push(course);
+        } 
+        else if (current_month <= 6 && month <= 6) {
+            course_list.push(course);
+        }
+    }
+    return course_list;
+}
 
 app.get("/fake-users", (req, res) => {
     canvas_token = process.env.CANVAS_TOKEN;
-    url = "https://canvas.instructure.com/api/v1/courses?access_token=" + canvas_token
+    url = "https://canvas.instructure.com/api/v1/courses?access_token=" + canvas_token + "&include[]=total_scores"
     axios.get(url)
     .then((response) => {
         console.log("From server: " + JSON.stringify(response.data, null, 2));
-        res.json(response.data);
+        const courses = parseCourses(response.data);
+        res.json(courses);
     })
     .catch(function(error) {
         console.log(error);

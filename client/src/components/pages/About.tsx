@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // Define the User type
 interface Course {
     name: string;
-    start_at: string;
+    grade: number;
     // Add other properties if needed
 }
 
@@ -12,6 +12,7 @@ function About() {
 
     const [courses, setCourses] = useState<Course[]>([]);
     const [error, setError] = useState("");
+    const [semester, setSemester] = useState("");
 
     useEffect(() => {
         fetch("http://localhost:8080/fake-users")
@@ -24,9 +25,19 @@ function About() {
             .then(data => {
                 setCourses(data); // Store the data in state
             })
-            .catch(error => {
-                setError('There has been a problem with your fetch operation: ' + error.message);
+            .catch(() => {
+                setError('Error loading course data.');
             });
+    }, []);
+
+    //Figure out what semester it is currently
+    useEffect(() => {
+        const now = new Date();
+        if (now.getMonth() > 6) {
+            setSemester("Fall, " + now.getFullYear());
+        } else {
+            setSemester("Spring, " + now.getFullYear());
+        }
     }, []);
 
     return (
@@ -68,13 +79,24 @@ function About() {
                 Over the summer I got to meet with countless students from all over the world. Outside of school I am studying Machine Learning through 
                 Coursera and YouTube. I love to apply math to real-world problems that Machine Learning aims to solve.
             </p>
-            <ul>
-                {courses.map(c => (
-                    <li>
-                        {c.name},  ({c.start_at})
-                    </li>
-                ))}
-            </ul>
+            <div className="canvas-parent">
+                <div className="canvas canvas-border">
+                    <div className="canvas-inside-container">
+                        <img src="/images/bascom.png" className="bascom-pic"></img>
+                        <div className="class-info">
+                            <h3 className="ubuntu-regular">My classes for {semester}</h3>
+                            <ul>
+                            {
+                                courses.map(course => {
+                                    return <li className="ubuntu-light">{course.name} ({course.grade})</li>
+                                })
+                            }
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Powered with <span className="red-text"><b>Canvas</b></span></p>
+                </div>
+            </div>
         </div>
     )
 }
