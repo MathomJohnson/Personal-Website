@@ -2,6 +2,14 @@ body {
   background-color: blue;
 }
 
+.my-border {
+  padding: 20px;
+  border: .01em solid var(--border-color);    /* Example border color (Dim Gray) */
+  border-radius: 30px;
+  background-color: var(--background-color);   /* Optional background color */
+  text-align: center;           /* Center text inside */
+}
+
 /* Font style options */
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
