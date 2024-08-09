@@ -5,26 +5,45 @@ function Skills() {
     return (
         <div id="skills">
             <h1>Skills</h1>
-            <div className="languages my-border">
-                <div className="python-wrapper">
-                    <img src="/images/python-logo.png" className="python-logo"></img>
-                    <p className="py-text"><b>Python</b></p>
+            <div className="skill-container">
+                <div className="languages my-border">
+                    <h2>General Languages</h2>
+                    <ul className="custom-bullets">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>TypeScript</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>C</li>
+                        <li>Bash</li>
+                        <li>Assembly</li>
+                    </ul>
                 </div>
-                <div className="python-wrapper">
-                    <img src="/images/typescript.png" className="python-logo"></img>
-                    <p className="py-text"><b>TypeScript</b></p>
+                <div className="languages my-border">
+                    <h2>Libraries & Tools</h2>
+                    <ul className="custom-bullets">
+                        <li>ScikitLearn</li>
+                        <li>Git</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Selenium</li>
+                        <li>BeautifulSoup</li>
+                        <li>SQLite</li>
+                        <li>MySQL</li>
+                    </ul>
                 </div>
-                <div className="python-wrapper">
-                    <img src="/images/java.png" className="python-logo"></img>
-                    <p className="py-text"><b>Java</b></p>
-                </div>
-                <div className="python-wrapper">
-                    <img src="/images/html.png" className="python-logo smaller-logo"></img>
-                    <p className="py-text"><b>HTML</b></p>
-                </div>
-                <div className="python-wrapper">
-                    <img src="/images/image.png" className="python-logo smaller-logo"></img>
-                    <p className="py-text"><b>JavaScript</b></p>
+                <div className="languages my-border">
+                    <h2>Fullstack Technologies</h2>
+                    <ul className="custom-bullets">
+                        <li>ReactJS</li>
+                        <li>NodeJS</li>
+                        <li>ExpressJS</li>
+                        <li>Django</li>
+                        <li>Flask</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>MySQL</li>
+                    </ul>
                 </div>
             </div>
         </div>

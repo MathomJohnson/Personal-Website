@@ -1,15 +1,58 @@
+:root {
+    --gradient: linear-gradient(
+        135deg,
+        white,
+        white,
+        #e8e8e8,
+        #c6c6c6,
+        #e8e8e8,
+        white,
+        white
+    ); /*e6e3e3*/
+}
+
 #skills {
-    margin-top: 300px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 0px;
 }
 
 .languages {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 30px;
     padding: 100px;
-    width: 50%;
-    margin: auto;
+    width: 28%;
+    height: 270px;
+    margin: 15px;
+    background-image: var(--gradient);
+    background-size: 400%;
+    animation: bg-animation 10s infinite alternate;
+}
+
+.custom-bullets {
+    list-style: none; /* Remove default bullets */
+    padding-left: 20px; /* Add some padding to the left to align the items */
+}
+
+.custom-bullets li {
+    display: inline-block;
+    background-image: url('/images/check.png');
+    background-size: 23px 23px; /* Size of the custom bullet */
+    background-repeat: no-repeat;
+    background-position: 0 14px; /* Position the bullet vertically */
+    padding-left: 31px; /* Add space to the left of the text */
+    margin-right: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px; /* Adjust the line height */
 }
 
 @keyframes fadeInOut {
@@ -24,28 +67,100 @@
     }
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bg-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+@keyframes fadeAndShowText {
+    0% {
+        background-color: white;
+        /* opacity: 1; */
+    }
+    50% {
+        background-color: black;
+        /* opacity: 0; */
+    }
+    100% {
+        background-color: white;
+        /* opacity: 1; */
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .python-logo {
-    width: 100px;
+    width: 80px;
     height: auto;
-    /* border-radius: 50%; */
+    /*border-radius: 50%; */
     transition: opacity 0.7s ease; /* Smooth transition for opacity */
-    animation: fadeInOut 5s infinite; /* 3 seconds duration, infinite loop */
+    /*animation: fadeOut 11s ease-in-out infinite; /* Sync with parent animation */
 }
 
 .smaller-logo {
-    width: 70px;
+    width: 50px;
     height: auto;
 }
 
 .python-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     transition: background-color 0.7s ease; /* Transition for smooth fading */
+    /*animation: fadeAndShowText 11s ease-in-out infinite; /* Apply animation */
 }
 
 .python-wrapper:hover {
@@ -65,5 +180,7 @@
     opacity: 0; /* Initially hidden */
     color: white;
     position: absolute; /* Position text in the center of the wrapper */
+    font-size: small;
     transition: opacity .7s ease; /* Smooth transition for opacity */
+    /*animation: fadeIn 11s ease-in-out infinite; /* Sync with parent animation */
 }
