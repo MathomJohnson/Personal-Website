@@ -38,7 +38,7 @@
     margin: 15px;
     background-image: var(--gradient);
     background-size: 400%;
-    animation: bg-animation 8s infinite alternate;
+    animation: bg-animation 7s infinite alternate;
 }
 
 .custom-bullets {

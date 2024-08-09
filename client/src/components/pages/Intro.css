@@ -67,3 +67,13 @@
   background-color: #3b3b3b; /* Darker green */
   color: #fff; /* White */
 }
+
+#intro {
+  text-align: center;
+}
+
+.chevron {
+  width: 30px;
+  height: auto;
+  text-align: center;
+}

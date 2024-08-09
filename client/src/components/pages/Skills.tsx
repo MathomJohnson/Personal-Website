@@ -29,7 +29,6 @@ function Skills() {
                         <li>Selenium</li>
                         <li>BeautifulSoup</li>
                         <li>SQLite</li>
-                        <li>MySQL</li>
                     </ul>
                 </div>
                 <div className="languages my-border">
