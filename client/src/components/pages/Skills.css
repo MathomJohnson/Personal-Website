@@ -3,12 +3,16 @@
         135deg,
         white,
         white,
-        #e8e8e8,
-        #c6c6c6,
-        #e8e8e8,
+        white,
+        white,
+        #ebe9e9,
+        #dfdfdf,
+        #ebe9e9,
+        white,
+        white,
         white,
         white
-    ); /*e6e3e3*/
+    );
 }
 
 #skills {
@@ -34,7 +38,7 @@
     margin: 15px;
     background-image: var(--gradient);
     background-size: 400%;
-    animation: bg-animation 10s infinite alternate;
+    animation: bg-animation 8s infinite alternate;
 }
 
 .custom-bullets {

@@ -1,0 +1,48 @@
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+/* .carousel-container {
+    
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; 
+} */
+
+.c {
+    width: 45%;
+}
+
+.c-inner {
+    display: flex;
+    align-items: center;
+    height: 450px;
+    /* border: 5px solid black; */
+}
+
+.c-item {
+    height: 100%;
+    /* border: 3px solid black; */
+}
+
+.c-div {
+    width: 70%;
+    height: 100%;
+    margin: auto;
+}
+
+.c-img {
+    width: 150px;
+    height: auto;
+}
+
+
+

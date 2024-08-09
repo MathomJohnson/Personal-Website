@@ -1,7 +1,3 @@
-body {
-  background-color: blue;
-}
-
 .my-border {
   padding: 20px;
   border: .01em solid var(--border-color);    /* Example border color (Dim Gray) */
