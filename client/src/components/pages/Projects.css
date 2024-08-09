@@ -24,12 +24,18 @@
 .c-inner {
     display: flex;
     align-items: center;
-    height: 450px;
+    height: 500px;
     /* border: 5px solid black; */
 }
 
+.c-indicators {
+    height: 0px;
+    padding-top: 200px;
+    /* border: 1px solid black; */
+}
+
 .c-item {
-    height: 100%;
+    height: 85%;
     /* border: 3px solid black; */
 }
 
@@ -39,10 +45,42 @@
     margin: auto;
 }
 
+.c-div ul {
+    list-style: circle;
+    margin-bottom: 10px;
+}
+
+.c-div p {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.c-div li {
+    padding: 4px 5px;
+    text-align: left;
+}
+
 .c-img {
-    width: 150px;
+    width: 140px;
     height: auto;
 }
 
+.button-container button{
+    margin: 0px 10px;
+}
 
+.vid-container {
+    width: 280px;
+    height: 160px;
+    margin: auto;
+}
+
+.skills-p {
+    margin-top: 0px;
+}
+
+.wordle-img {
+    width: 300px;
+    height: auto;
+}
 
