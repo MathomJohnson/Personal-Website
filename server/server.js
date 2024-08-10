@@ -4,7 +4,7 @@ const axios = require("axios");
 require("dotenv").config();
 const app = express();
 const corsOptions = {
-    options: ["http://localhost:5173/"],
+    options: ["https://personal-website-client-tau.vercel.app/"],
 };
 
 app.use(cors(corsOptions));
@@ -44,7 +44,7 @@ function parseCourses(courses) {
     return course_list;
 }
 
-app.get("/fake-users", (req, res) => {
+app.get("/course-data", (req, res) => {
     canvas_token = process.env.CANVAS_TOKEN;
     url = "https://canvas.instructure.com/api/v1/courses?access_token=" + canvas_token + "&include[]=total_scores"
     axios.get(url)
