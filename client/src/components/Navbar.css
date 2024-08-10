@@ -8,9 +8,14 @@ nav {
     z-index: 1000; /* Make sure it's above other content */
 }
 
+.center-nav {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Make sure it spans the full width of its container */
+}
+
 .navbar-nav {
     margin-top: 20px;
-    margin-right: 10%;
 }
 
 .nav-link {
@@ -50,3 +55,19 @@ nav {
     color: black; /* Optional: Adjust this to change the text color on hover */
 }
 /* End Link border animation */
+
+#nav-page-links {
+    display: none;
+    margin-top: 30px !important;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 450px) {
+    nav {
+        display: none !important;
+    }
+
+    #nav-page-links {
+        display: block;
+    }
+}

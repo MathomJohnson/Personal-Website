@@ -74,14 +74,31 @@
   text-align: center;
 }
 
-.chevron {
-  width: 30px;
-  height: auto;
-  text-align: center;
-}
 
 @media (max-width: 450px) {
+  #intro {
+    margin-top: 20px;
+    padding: 0px 5px;
+  }
+
   #intro-container {
     flex-direction: column;
+  }
+
+  .mathom-headshot {
+    width: 200px;
+    height: 200px;
+  }
+
+  .left-content {
+    width: 100%;
+    padding: 0px;
+  }
+
+  .intro {
+    width: 100%; 
+    text-align:center;
+  } .intro h1 {
+    font-size: 45px;
   }
 }

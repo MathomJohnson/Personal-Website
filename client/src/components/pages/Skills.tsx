@@ -3,12 +3,12 @@ import "./Skills.css"
 function Skills() {
 
     return (
-        <div id="skills">
-            <h1>Skills</h1>
+        <div id="skills" className="section">
+            <h1 className="inter-title">Skills</h1>
             <div className="skill-container">
                 <div className="languages my-border">
-                    <h2>General Languages</h2>
-                    <ul className="custom-bullets">
+                    <h2 className="inter-bold">General Languages</h2>
+                    <ul className="custom-bullets inter-bold">
                         <li>Python</li>
                         <li>Java</li>
                         <li>TypeScript</li>
@@ -20,8 +20,8 @@ function Skills() {
                     </ul>
                 </div>
                 <div className="languages my-border">
-                    <h2>Libraries & Tools</h2>
-                    <ul className="custom-bullets">
+                    <h2 className="inter-bold">Libraries & Tools</h2>
+                    <ul className="custom-bullets inter-bold">
                         <li>ScikitLearn</li>
                         <li>Git</li>
                         <li>Pandas</li>
@@ -32,8 +32,8 @@ function Skills() {
                     </ul>
                 </div>
                 <div className="languages my-border">
-                    <h2>Fullstack Technologies</h2>
-                    <ul className="custom-bullets">
+                    <h2 className="inter-bold">Fullstack Technologies</h2>
+                    <ul className="custom-bullets inter-bold">
                         <li>ReactJS</li>
                         <li>NodeJS</li>
                         <li>ExpressJS</li>

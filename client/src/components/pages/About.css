@@ -6,9 +6,89 @@
   text-align: center;           /* Center text inside */
 }
 
+/* #about h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.education-container {
+  width: 100%;
+}
+
+.education {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.interests-container {
+  width: 100%;
+}
+
+.interests {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.edu-and-interests {
+  display: flex;
+  flex-direction: column; 
+  gap: 25px;
+  width: 35%;
+}
+
+.education-desc p {
+  font-size: larger;
+  margin-bottom: 0px;
+}
+
+.interests-desc p {
+  font-size: larger;
+  margin-bottom: 0px;
+}
+
+.about-me {
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  font-size: large;
+}
+
+.grand-canyon {
+  width: 95%;
+}
+
+.gc-pic {
+  width: 100%;
+  height: auto;
+  border-radius: 32px;
+}
+
+.mortarboard-logo {
+  height: 30px;
+  width:30px;
+}
+
+.magnifying-logo {
+  height:25px;
+  width: auto;
+} */
+
+
 #about {
   padding-top: 100px;
-} #about h2 {
+} #about h1 {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -152,3 +232,65 @@
   width: auto;
 }
 /* End canvas container */
+
+@media (max-width: 450px) {
+  #about-container {
+    flex-direction: column;
+  }
+
+  .edu-and-interests {
+    width: 95%;
+  }
+
+  #about-container {
+    gap: 25px;
+  }
+
+  .about-me {
+    width: 95%;
+    text-align: center;
+  }
+
+  .grand-canyon {
+    width: 95%;
+  }
+
+  .canvas-parent {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .canvas {
+    padding: 0;
+    display: block;
+  }
+
+  .canvas p {
+    padding-bottom: 5px;
+  }
+
+  .bascom-pic {
+    display: none;
+  }
+
+  .canvas-inside-container {
+    text-align: center;
+  }
+  
+  .canvas-inside-container li {
+    font-size: small;
+  }
+
+  .canvas-inside-container ul {
+    list-style: none;
+  }
+
+  .class-info {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

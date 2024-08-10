@@ -41,17 +41,17 @@ function About() {
     }, []);
 
     return (
-        <div id="about">
-            <h2 className="ubuntu-medium">Get To Know Me</h2>
+        <div id="about" className="section">
+            <h1 className="inter-title">About Me</h1>
             <div id="about-container">
                 <div className="edu-and-interests">
                     <div className="education-container my-border">
                         <div className="education">
                             <img className="mortarboard-logo" src="/images/mortarboard.png"></img>
-                            <h3 className="ubuntu-light-italic">Education</h3>
+                            <h4 className="inter-bold">Education</h4>
                         </div>
                         <div className="education-desc">
-                            <p className="ubuntu-light-italic">
+                            <p className="inter-reg">
                                 Pursuing a B.S. in Computer Science @ UW-Madison
                             </p>
                         </div>
@@ -59,10 +59,10 @@ function About() {
                     <div className="interests-container my-border">
                         <div className="interests">
                             <img className="magnifying-logo" src="/images/magnifying-glass.png"></img>
-                            <h3 className="ubuntu-regular">Interests</h3>
+                            <h4 className="inter-bold">Interests</h4>
                         </div>
                         <div className="interests-desc">
-                            <p className="ubuntu-light-italic">
+                            <p className="inter-reg">
                                 Full Stack Development, Machine Learning, Internet Of Things, Applied Math
                             </p>
                         </div>
@@ -72,7 +72,7 @@ function About() {
                     <img className="gc-pic" src="/images/grand-canyon.png" alt="Grand Canyon"></img>
                 </div>
             </div>
-            <p className="ubuntu-light-italic about-me">
+            <p className="inter-reg about-me">
                 My name is Mathom Johnson and I'm a sophomore studying Computer Science at the University of Wisconsin-Madison.
                 Currently, I am working as a mentor and web developer for a student startup here in Madison called "International Badger Bonds".
                 Our goal is to connect incoming international students with student mentors who can provide assistance while they settle into a new environment.
@@ -84,17 +84,17 @@ function About() {
                     <div className="canvas-inside-container">
                         <img src="/images/bascom.png" className="bascom-pic"></img>
                         <div className="class-info">
-                            <h3 className="ubuntu-regular">My classes for {semester}</h3>
+                            <h3 className="inter-bold">{semester} Courses</h3>
                             <ul>
                             {
                                 courses.map(course => {
-                                    return <li className="ubuntu-light">{course.name} ({course.grade})</li>
+                                    return <li className="inter-reg">{course.name}</li>
                                 })
                             }
                             </ul>
                         </div>
                     </div>
-                    <p>Powered with <span className="red-text"><b>Canvas</b></span></p>
+                    <p className="inter-reg">Powered with <span className="red-text"><b>Canvas</b></span></p>
                 </div>
             </div>
         </div>
