@@ -8,10 +8,10 @@ function Intro() {
                     <img className="mathom-headshot" src="/images/mathom-head.png" alt="Mathom Headshot"></img>
                 </div>
                 <div className="intro">
-                    <p className="ubuntu-light-italic">My name is:</p>
-                    <h1 className="ubuntu-medium">Mathom Johnson</h1>
-                    <p className="ubuntu-light-italic">Sophomore @ UW-Madison studying Computer Science</p>
-                    <button className="resume-button" onClick={() => window.open('/MathomResume.pdf', '_blank')}>Resume</button>
+                    {/* <p className="inter-reg">My name is:</p> */}
+                    <h1 className="inter-bold">Mathom Johnson</h1>
+                    <p className="inter-reg">Sophomore @ UW-Madison studying Computer Science</p>
+                    <button className="wendy-one-regular resume-button" onClick={() => window.open('/MathomResume.pdf', '_blank')}>Resume</button>
                     <div className="social-media">
                         <a href="https://www.linkedin.com/in/mathomjohnson">
                             <img className="logo" src="/images/linkedin-logo.png" alt="LinkedIn Logo"></img>

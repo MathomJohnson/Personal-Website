@@ -25,15 +25,17 @@
   /*margin:auto;*/
   text-align:center;
 } .intro p {
-  margin-bottom: 0px;
+  margin: 12px 0px;
   font-size: large;
 } .intro h1 {
+  padding: 0px;
+  margin: 0px;
   font-size: 50px;
 }
 
 .mathom-headshot {
-    width: 350px; /* Adjust the width as needed */
-    height: 350px; /* Adjust the height to match the width for a perfect circle */
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height to match the width for a perfect circle */
     border-radius: 50%; /* Makes the image circular */
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
@@ -56,7 +58,7 @@
   display: inline-block;
   font-size: 16px;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   cursor: pointer;
   border-radius: 20px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Adjusted transition duration */
@@ -76,4 +78,10 @@
   width: 30px;
   height: auto;
   text-align: center;
+}
+
+@media (max-width: 450px) {
+  #intro-container {
+    flex-direction: column;
+  }
 }
