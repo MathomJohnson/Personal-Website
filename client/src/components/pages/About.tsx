@@ -11,7 +11,7 @@ interface Course {
 function About() {
 
     const [courses, setCourses] = useState<Course[]>([]);
-    const [error, setError] = useState("");
+    // const [error, setError] = useState("");
     const [semester, setSemester] = useState("");
 
     useEffect(() => {
@@ -26,7 +26,8 @@ function About() {
                 setCourses(data); // Store the data in state
             })
             .catch(() => {
-                setError('Error loading course data.');
+                // setError('Error loading course data.');
+                console.log('Error loading course data.');
             });
     }, []);
 
