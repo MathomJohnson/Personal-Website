@@ -6,7 +6,9 @@ const app = express();
 // dev: http://localhost:5173
 // prod: https://personal-website-client-tau.vercel.app
 const corsOptions = {
-    origin: "https://personal-website-client-tau.vercel.app"
+    origin: ["https://personal-website-client-tau.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
 };
 
 app.use(cors(corsOptions));
