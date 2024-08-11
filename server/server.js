@@ -44,6 +44,10 @@ function parseCourses(courses) {
     return course_list;
 }
 
+app.get("/", (req, res) => {
+    res.send("Server is up and running!");
+});
+
 app.get("/course-data", (req, res) => {
     canvas_token = process.env.CANVAS_TOKEN;
     url = "https://canvas.instructure.com/api/v1/courses?access_token=" + canvas_token + "&include[]=total_scores"
