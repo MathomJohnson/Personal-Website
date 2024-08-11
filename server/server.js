@@ -4,7 +4,7 @@ const axios = require("axios");
 require("dotenv").config();
 const app = express();
 const corsOptions = {
-    options: ["https://personal-website-client-tau.vercel.app/"],
+    origin: "https://personal-website-client-tau.vercel.app"
 };
 
 app.use(cors(corsOptions));
