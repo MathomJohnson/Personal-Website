@@ -14,6 +14,9 @@ function About() {
     // const [error, setError] = useState("");
     const [semester, setSemester] = useState("");
 
+
+    //prod: https://personal-website-server-kappa.vercel.app/course-data
+    //dev: http://localhost:8080
     useEffect(() => {
         fetch("https://personal-website-server-kappa.vercel.app/course-data")
             .then(response => {
