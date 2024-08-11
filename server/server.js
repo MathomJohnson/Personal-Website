@@ -1,7 +1,7 @@
 const express = require("express");
-const cors = require("cors");
-const axios = require("axios");
-require("dotenv").config();
+// const cors = require("cors");
+// const axios = require("axios");
+// require("dotenv").config();
 const app = express();
 // dev: http://localhost:5173
 // prod: https://personal-website-client-tau.vercel.app
