@@ -5,13 +5,17 @@ require("dotenv").config();
 const app = express();
 // dev: http://localhost:5173
 // prod: https://personal-website-client-tau.vercel.app
-const corsOptions = {
-    origin: ["https://personal-website-client-tau.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-};
+// const corsOptions = {
+//     origin: ["https://personal-website-client-tau.vercel.app"],
+//     methods: ["POST", "GET"],
+//     credentials: true
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+
+app.get("/", (req, res) => {
+    res.send("Server is up and running!");
+});
 
 // Filter classes based on current semester
 // function parseCourses(courses) {
@@ -47,10 +51,6 @@ app.use(cors(corsOptions));
 //     }
 //     return course_list;
 // }
-
-app.get("/", (req, res) => {
-    res.send("Server is up and running!");
-});
 
 // app.get("/course-data", (req, res) => {
 //     canvas_token = process.env.CANVAS_TOKEN;
