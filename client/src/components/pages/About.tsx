@@ -14,11 +14,8 @@ function About() {
     // const [error, setError] = useState("");
     const [semester, setSemester] = useState("");
 
-
-    //prod: https://personal-website-server-kappa.vercel.app/course-data
-    //dev: http://localhost:8080
     useEffect(() => {
-        fetch("https://test-two-rho-41.vercel.app/course-data")
+        fetch("personal-website-server-kappa.vercel.app/course-data")
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
