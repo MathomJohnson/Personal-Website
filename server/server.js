@@ -1,20 +1,33 @@
 const express = require("express");
+const app = express();
 const cors = require("cors");
 const axios = require("axios");
 require("dotenv").config();
-const app = express();
-// dev: http://localhost:5173
-// prod: https://personal-website-client-tau.vercel.app
-const corsOptions = {
+
+app.use(cors({
     origin: ["https://personal-website-client-tau.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
-};
-
-app.use(cors(corsOptions));
+}));
 
 app.get("/", (req, res) => {
-    res.send("Server is up and running!");
+    res.send("Hello mate")
+})
+
+app.get("/course-data", (req, res) => {
+    canvas_token = process.env.CANVAS_TOKEN;
+    url = "https://canvas.instructure.com/api/v1/courses?access_token=" + canvas_token + "&include[]=total_scores"
+    axios.get(url)
+    .then((response) => {
+        console.log("From server: " + JSON.stringify(response.data, null, 2));
+        const courses = parseCourses(response.data);
+        res.json(courses);
+    })
+    .catch(function(error) {
+        console.log(error);
+    }).finally(function() {
+        console.log("This always runs!!" + canvas_token);
+    })
 });
 
 // Filter classes based on current semester
@@ -51,22 +64,6 @@ function parseCourses(courses) {
     }
     return course_list;
 }
-
-app.get("/course-data", (req, res) => {
-    canvas_token = process.env.CANVAS_TOKEN;
-    url = "https://canvas.instructure.com/api/v1/courses?access_token=" + canvas_token + "&include[]=total_scores"
-    axios.get(url)
-    .then((response) => {
-        console.log("From server: " + JSON.stringify(response.data, null, 2));
-        const courses = parseCourses(response.data);
-        res.json(courses);
-    })
-    .catch(function(error) {
-        console.log(error);
-    }).finally(function() {
-        console.log("This always runs!!" + canvas_token);
-    })
-});
 
 app.listen(8080, () => {
     console.log("Server listening on port 8080")
