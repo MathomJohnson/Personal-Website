@@ -15,7 +15,7 @@ function About() {
     const [semester, setSemester] = useState("");
 
     useEffect(() => {
-        fetch("personal-website-server-kappa.vercel.app/course-data")
+        fetch("https://personal-website-server-kappa.vercel.app/course-data")
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok ' + response.statusText);
