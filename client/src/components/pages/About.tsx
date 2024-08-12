@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 interface Course {
     name: string;
     grade: number;
-    // Add other properties if needed
+    // Add other properties if needed;
 }
 
 function About() {
