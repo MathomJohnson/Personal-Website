@@ -5,7 +5,7 @@ const axios = require("axios");
 require("dotenv").config();
 
 app.use(cors({
-    origin: ["https://www.mathomjohnson.com/"],
+    origin: ["https://www.mathomjohnson.com"],
     methods: ["POST", "GET"],
     credentials: true
 }));
