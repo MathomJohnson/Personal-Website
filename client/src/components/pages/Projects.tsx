@@ -6,7 +6,7 @@ function Projects() {
         <div id="projects" className="section">
             <h1 className="inter-title">Projects</h1>
             <div id="projects-wrapper" data-bs-theme="dark">
-                <div id="carouselExampleIndicators" className="carousel slide c">
+                <div id="carouselExampleIndicators" className="carousel slide c" data-bs-interval="5000" data-bs-ride="carousel" data-bs-touch="true">
                     <div className="carousel-indicators c-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
