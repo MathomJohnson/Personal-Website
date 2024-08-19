@@ -1,19 +1,30 @@
 import './Projects.css'
+import { useEffect } from 'react';
 
 function Projects() {
+
+    useEffect(() => {
+        // Select the "Next" button using its class name
+        const nextButton = document.querySelector('.carousel-control-prev') as HTMLButtonElement;
+
+        // Check if the button exists and then simulate a click event
+        if (nextButton) {
+            nextButton.click();
+        }
+    });
 
     return (
         <div id="projects" className="section">
             <h1 className="inter-title">Projects</h1>
             <div id="projects-wrapper" data-bs-theme="dark">
-                <div id="carouselExampleIndicators" className="carousel slide c" data-bs-interval="5000" data-bs-ride="carousel" data-bs-touch="true">
+                <div id="carouselExampleIndicators" className="carousel slide c" data-bs-touch="true">
                     <div className="carousel-indicators c-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                    <div className="carousel-inner c-inner  active">
-                        <div className="carousel-item c-item active">
+                    <div className="carousel-inner c-inner active">
+                        <div className="carousel-item c-item">
                             <div className="my-border d-block c-div">
                                 <img src="/images/IBB.png" className="c-img" alt="..."></img>
                                 <p className="inter-bolder">I led the development of the Interational Badger Bonds website.</p> 
@@ -45,7 +56,7 @@ function Projects() {
                                 </div>
                             </div>
                         </div>
-                        <div className="carousel-item c-item">
+                        <div className="carousel-item c-item active">
                             <div className="my-border d-block c-div">
                                 <img src="/images/wordle.png" className="wordle-img" alt="Wordle Logo"></img>
                                 <p className="inter-bolder">I built a Selenium script to automatically solve the daily Wordle.</p>
