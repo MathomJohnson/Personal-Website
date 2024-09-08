@@ -87,6 +87,7 @@ function About() {
                         <div className="class-info">
                             <h3 className="inter-bold">{semester} Courses</h3>
                             <ul>
+                            <li className="inter-reg">STAT240: Data Science Modeling I</li>
                             {
                                 courses.map(course => {
                                     return <li className="inter-reg">{course.name}</li>
