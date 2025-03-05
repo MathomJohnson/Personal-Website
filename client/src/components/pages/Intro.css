@@ -2,12 +2,34 @@
     --border-color: #808080; /* Define custom property */
     --background-color: white;
 }
+#navbar {
+  height: auto; /* Set the height of the navbar to auto */
+}
+
+#intro-container {
+  height: calc(100vh - var(--navbar-height)); /* Subtract the dynamic height of the navbar */
+}
+
+:root {
+  --navbar-height: 60px; /* Default value for the navbar height */
+}
+
+@media (max-width: 1150px) {
+  :root {
+    /*--navbar-height: auto; /* Adjust the navbar height for smaller screens */
+  }
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 /* Flexbox container for horizontal layout */
 #intro-container {
-  height: calc(100vh - 240px); /* Full viewport height */
+  /*height: calc(100vh - 240px); /* Full viewport height */
   display: flex;
-  gap: 40px;
+  gap: 5%;
   justify-content: center; /* Distributes space between the items */
   align-items: center;           /* Centers items vertically */
   }
@@ -15,14 +37,12 @@
   /* Left content styling */
   .left-content {
     width: 30%;                    /* Takes up half the width of the parent container */
-    padding: 20px;
     text-align: center;           /* Center text inside */
   }
   
 /* About div styling */
 .intro {
   width: 30%;                    /* Takes up the other half of the width of the parent container */
-  /*margin:auto;*/
   text-align:center;
 } .intro p {
   margin: 12px 0px;
@@ -74,20 +94,63 @@
   text-align: center;
 }
 
+@media (max-width: 1450px) {
+  /* adjusting size of right content */
+  .intro {
+    width: 30%; 
+  } .intro p {
+    font-size: medium;
+  } .intro h1 {
+    font-size: 40px;
+  }
+
+  .left-content {
+    width: 30%;
+  }
+
+  .mathom-headshot {
+    width: 325px;
+    height: 325px;
+  }
+
+  #intro-container {
+    gap: 80px;
+  }
+}
+
+@media (max-width: 1150px) {
+  #intro-container {
+    gap: 6%;
+    flex-direction: column;
+  }
+  .mathom-headshot {
+    width: 280px; /* 10% smaller than 325px */
+    height: 280px;
+  }
+
+  .intro {
+    width: 60%;
+  }
+
+  .left-content {
+    width: 60%;
+  }
+}
 
 @media (max-width: 450px) {
   #intro {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding: 0px 5px;
   }
 
   #intro-container {
     flex-direction: column;
+    gap: 10%;
   }
 
   .mathom-headshot {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
   }
 
   .left-content {
@@ -97,6 +160,7 @@
 
   .intro {
     width: 100%; 
+    height: 40%;
     text-align:center;
   } .intro h1 {
     font-size: 45px;

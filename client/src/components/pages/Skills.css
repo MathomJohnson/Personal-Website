@@ -23,14 +23,22 @@
     margin-bottom: 30px;
 }
 
-.skill-container {
+/* .skill-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0px;
+} */
+.skill-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap when screen width shrinks */
+    justify-content: center; /* Centers items */
+    gap: 3%; /* Spacing between columns */
+    width: 85%; /* 90% of the container width */
+    margin: 0 auto; /* Centers the container */
 }
 
-.languages {
+/* .languages {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -41,11 +49,34 @@
     background-image: var(--gradient);
     background-size: 400%;
     animation: bg-animation 7s infinite alternate;
+} */
+.languages {
+    flex: 1; /* Allows divs to grow and shrink */
+    /*min-width: 250px; /* Prevents divs from getting too narrow */
+    /*min-height: 100px; /* Ensures they don’t collapse */
+    /* padding: 20px; */
+    border: 2px solid #000; /* Example border */
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center; 
+    width: 30%;
+    /* margin: auto; */
 }
 
 .languages h2 {
     color: #676767
 }
+
+.custom-bullets {
+    display: flex;
+    /* flex-direction: column; */
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100%; /* Ensures list expands container */
+    padding: 15px 0px;
+}
+
 
 .custom-bullets {
     list-style: none; /* Remove default bullets */
@@ -68,6 +99,20 @@
 @keyframes bg-animation {
     0% {background-position: left;}
     100% {background-position: right;}
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .languages {
+        flex-basis: 45%; /* Each div takes roughly half of the space */
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 800px) {
+    .languages {
+        flex-basis: 100%; /* Each div takes full width on smaller screens */
+    }
 }
 
 @media (max-width: 450px) {

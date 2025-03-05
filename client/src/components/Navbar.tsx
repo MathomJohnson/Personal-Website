@@ -4,7 +4,7 @@ import '../App.css'
 function Navbar() {
     return (
         <>
-        <nav className="navbar navbar-expand-lg bg-body-white">
+        <nav className="navbar navbar-expand-md bg-body-white">
             <div className="container-fluid">
                 {/* <a className="navbar-brand inter-reg">Mathom Johnson</a> */}
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
