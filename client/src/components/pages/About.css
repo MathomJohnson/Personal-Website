@@ -6,86 +6,6 @@
   text-align: center;           /* Center text inside */
 }
 
-/* #about h1 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-#about-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
-}
-
-.education-container {
-  width: 100%;
-}
-
-.education {
-  display: flex;
-  width: 100%;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.interests-container {
-  width: 100%;
-}
-
-.interests {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.edu-and-interests {
-  display: flex;
-  flex-direction: column; 
-  gap: 25px;
-  width: 35%;
-}
-
-.education-desc p {
-  font-size: larger;
-  margin-bottom: 0px;
-}
-
-.interests-desc p {
-  font-size: larger;
-  margin-bottom: 0px;
-}
-
-.about-me {
-  width: 70%;
-  margin: auto;
-  margin-top: 30px;
-  font-size: large;
-}
-
-.grand-canyon {
-  width: 95%;
-}
-
-.gc-pic {
-  width: 100%;
-  height: auto;
-  border-radius: 32px;
-}
-
-.mortarboard-logo {
-  height: 30px;
-  width:30px;
-}
-
-.magnifying-logo {
-  height:25px;
-  width: auto;
-} */
-
-
 #about {
   padding-top: 100px;
 } #about h1 {
@@ -154,7 +74,9 @@
 
 .gc-pic {
   width: 100%;
-  height: auto;
+  height: 275px;
+  object-fit: cover;
+  object-position: center;
   border-radius: 30px;
 }
 
@@ -233,17 +155,34 @@
 }
 /* End canvas container */
 
-@media (max-width: 450px) {
+@media (max-width: 1450px) {
   #about-container {
     flex-direction: column;
+    gap: 25px;
   }
 
   .edu-and-interests {
-    width: 95%;
+    width: 60%;
   }
 
-  #about-container {
-    gap: 25px;
+  .grand-canyon {
+    width: 60%;
+  }
+
+  .gc-pic {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-me {
+    width: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .edu-and-interests {
+    width: 95%;
   }
 
   .about-me {
