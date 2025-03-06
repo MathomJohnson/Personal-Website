@@ -47,10 +47,17 @@
     font-size: large;
   }
 
+.navbar-bottom {
+    position: absolute;
+    bottom: 0; /* Adjust for the desired spacing */
+    left: 0;
+    width: 100%;
+}
+
   /* Links at bottom */
   #page-links {
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 
   .custom-links {
