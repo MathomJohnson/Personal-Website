@@ -102,7 +102,7 @@
 }
 
 /* Responsive breakpoints */
-@media (max-width: 1200px) {
+@media (max-width: 1370px) {
     .languages {
         flex-basis: 45%; /* Each div takes roughly half of the space */
         margin-top: 3%;
