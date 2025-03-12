@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 app.get("/course-data", (req, res) => {
     canvas_token = process.env.CANVAS_TOKEN;
-    url = "https://canvas.instructure.com/api/v1/courses?access_token=" + canvas_token + "&include[]=total_scores"
+    url = "https://canvas.instructure.com/api/v1/courses?per_page=100&access_token=" + canvas_token + "&include[]=total_scores"
     axios.get(url)
     .then((response) => {
         console.log("From server: " + JSON.stringify(response.data, null, 2));
