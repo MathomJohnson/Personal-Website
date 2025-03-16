@@ -10,6 +10,12 @@ app.use(cors({
     credentials: true
 }));
 
+// app.use(cors({
+//     origin: ["http://localhost:5173"],
+//     methods: ["POST", "GET"],
+//     allowedHeaders: ['Content-Type']
+// }));
+
 app.get("/", (req, res) => {
     res.send("Hello mate")
 })
