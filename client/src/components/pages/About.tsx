@@ -13,7 +13,7 @@ function About() {
     const [courses, setCourses] = useState<Course[]>([]);
     // const [error, setError] = useState("");
     const [semester, setSemester] = useState("");
-
+    
     useEffect(() => {
         fetch("https://personal-website-server-kappa.vercel.app/course-data")
             .then(response => {
@@ -53,7 +53,7 @@ function About() {
                         </div>
                         <div className="education-desc">
                             <p className="inter-reg">
-                                Pursuing a B.S. in Computer Science @ UW-Madison
+                                Pursuing my B.S. in Computer Science and Data Science @ UW-Madison
                             </p>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ function About() {
                 Currently, I am working as a mentor and web developer for a student startup here in Madison called "International Badger Bonds".
                 Our goal is to connect incoming international students with student mentors who can provide assistance while they settle into a new environment.
                 Over the summer I got to meet with countless students from all over the world. Outside of school I am studying Machine Learning through 
-                Coursera and YouTube. I love to apply math to real-world problems that Machine Learning aims to solve.
+                Coursera and YouTube. I love to apply math to real-world problems.
             </p>
             <div className="canvas-parent">
                 <div className="canvas canvas-border">
@@ -87,7 +87,6 @@ function About() {
                         <div className="class-info">
                             <h3 className="inter-bold">{semester} Courses</h3>
                             <ul>
-                            <li className="inter-reg">STAT240: Data Science Modeling I</li>
                             {
                                 courses.map(course => {
                                     return <li className="inter-reg">{course.name}</li>

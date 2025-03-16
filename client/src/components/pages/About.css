@@ -177,6 +177,43 @@
   .about-me {
     width: 60%;
   }
+
+  .canvas {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .bascom-pic {
+    display: none;
+  }
+
+  .canvas {
+    padding: 0;
+    display: block;
+    word-wrap: break-word; /* Ensure text wraps */
+    overflow-wrap: break-word; /* Forcing the text to wrap */
+    width: 85%;
+  }
+
+  .class-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .canvas-inside-container ul {
+    list-style: none;
+  }
+
+  .canvas-inside-container li {
+    font-size: medium;
+    word-wrap: break-word; /* Ensure list items wrap */
+    overflow-wrap: break-word; /* For breaking long words */
+    word-break: break-word; /* Force words to break at the end of a line */
+    white-space: normal;
+  }
 }
 
 @media (max-width: 450px) {
@@ -198,19 +235,19 @@
     width: 95%;
     margin: auto;
     margin-top: 20px;
+    
   }
 
   .canvas {
     padding: 0;
     display: block;
+    word-wrap: break-word; /* Ensure text wraps */
+    overflow-wrap: break-word; /* Forcing the text to wrap */
+    width: 95%;
   }
 
   .canvas p {
     padding-bottom: 5px;
-  }
-
-  .bascom-pic {
-    display: none;
   }
 
   .canvas-inside-container {
@@ -219,6 +256,10 @@
   
   .canvas-inside-container li {
     font-size: small;
+    word-wrap: break-word; /* Ensure list items wrap */
+    overflow-wrap: break-word; /* For breaking long words */
+    word-break: break-word; /* Force words to break at the end of a line */
+    white-space: normal;
   }
 
   .canvas-inside-container ul {
@@ -231,5 +272,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap inside flexbox */
+    width: 95%;
   }
 }

@@ -10,7 +10,7 @@ function Intro() {
                 <div className="intro">
                     {/* <p className="inter-reg">My name is:</p> */}
                     <h1 className="inter-bold">Mathom Johnson</h1>
-                    <p className="inter-reg">Sophomore @ UW-Madison studying Computer Science</p>
+                    <p className="inter-reg">Sophomore @ UW-Madison studying CS & DS</p>
                     <button className="wendy-one-regular resume-button" onClick={() => window.open('/MathomResume.pdf', '_blank')}>Resume</button>
                     <div className="social-media">
                         <a href="https://www.linkedin.com/in/mathomjohnson">
