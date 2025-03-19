@@ -56,9 +56,11 @@
 
   /* Links at bottom */
   #page-links {
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 30px; /* Add padding at the bottom to raise links from the edge */
+}
 
   .custom-links {
     display: flex;
@@ -75,4 +77,10 @@
   .custom-links {
     gap: 20px;
   }
+
+  /* Ensure padding is responsive too */
+  #page-links {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
 }
